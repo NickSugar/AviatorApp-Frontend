@@ -4,13 +4,15 @@
   "description": "App for aviators to gain knowledge",
   "main": "index.js",
   "dependencies": {
-    "sw-precache": "^5.1.1"
+    "sw-precache": "^5.1.1",
+    "gulp": "^3.9.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1"
   },
   "scripts": {
-    "precache": "sw-precache"
+    "start": "gulp",
+    "precache": "sw-precache --verbose --config=sw-precache-config.js"
   },
   "repository": {
     "type": "git",
