@@ -1,0 +1,25 @@
+{
+  "name": "aviatorsapp",
+  "version": "1.0.0",
+  "description": "App for aviators to gain knowledge",
+  "main": "index.js",
+  "dependencies": {
+    "sw-precache": "^5.1.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "precache": "sw-precache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickSugar/AviatorApp-Frontend.git"
+  },
+  "author": "Nick Sugar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NickSugar/AviatorApp-Frontend/issues"
+  },
+  "homepage": "https://github.com/NickSugar/AviatorApp-Frontend#readme"
+}
