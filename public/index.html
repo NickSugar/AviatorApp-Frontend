@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <base href="/">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Aviators App</title>
@@ -34,17 +35,21 @@
 
     <div ui-view></div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script src="https://cdn.auth0.com/js/auth0/8.7/auth0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.auth0.com/js/lock/10.5/lock.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-auth0/1.0.7/angular-auth0.min.js"></script> -->
+    <script type="text/javascript" src="angular-auth0.min.js"></script>
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script> -->
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/angular-moment/1.0.1/angular-moment.min.js"></script> -->
     <script src="app.module.js"></script>
     <script src="app.config.js"></script>
-    <!-- <script src="services/posts.factory.js"></script> -->
+    <script src="services/auth.factory.js"></script>
     <script src="header.component.js"></script>
     <!-- <script src="posts/posts.component.js"></script> -->
     <!-- <script src="postComp/post.component.js"></script> -->
