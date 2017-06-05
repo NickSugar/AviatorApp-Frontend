@@ -13,6 +13,7 @@
         const vm = this
 
         var authenticated = authService.isAuthenticated()
+        console.log(authenticated);
 
         if (authenticated) {
           template = './homeComponent/premiumHome.html'
