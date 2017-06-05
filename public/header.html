@@ -19,16 +19,16 @@
       <p class="btnText">Sign out</p>
     </md-nav-item>
   </md-nav-bar> -->
-  <md-button class="md-primary md-raised"
+  <md-button flex="10" class="md-primary md-raised"
     ng-if="!$ctrl.auth.isAuthenticated()"
-    md-nav-click="$ctrl.auth.login()">
-    Sign in
+    ng-click="$ctrl.auth.login()">
+    <p class="btnText">Sign in</p>
   </md-button>
 
-  <md-button class="md-warn md-raised"
+  <md-button flex="10" class="md-warn md-raised"
     ng-if="$ctrl.auth.isAuthenticated()"
-    md-nav-click="$ctrl.auth.logout()">
-    Sign out
+    ng-click="$ctrl.auth.logout()">
+    <p class="btnText">Sign out</p>
   </md-button>
 
   <div flex="10">
