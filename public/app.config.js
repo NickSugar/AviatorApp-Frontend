@@ -36,7 +36,7 @@
         responseType: 'token id_token',
         audience: 'https://nicksugar.auth0.com/userinfo',
         // redirectUri: 'http://localhost:5000/premium',
-        redirectUri: 'https://aviatorsapp.com/?utm_source=web_app_manifest#/premium',
+        redirectUri: 'https://aviatorsapp.com/?utm_source=web_app_manifest/premium',
         scope: 'openid'
       });
 
