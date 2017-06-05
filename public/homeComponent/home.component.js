@@ -21,6 +21,6 @@
           template = './homeComponent/home.html'
         }
 
-        authService.authenticated = authenticated
+        // authService.authenticated = authenticated
     }
 }())
