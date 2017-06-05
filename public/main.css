@@ -1,3 +1,58 @@
 body {
   background-color: rgb(137, 204, 237);
 }
+
+main {
+  margin: 0 15px 0 10px;
+  padding-top: 10px;
+}
+
+.header{
+  height: 15vh;
+}
+
+.btnText{
+  font-family: 'El Messiri', sans-serif;
+}
+
+.appNameDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appName{
+  text-align: center;
+  font-family: 'El Messiri', sans-serif;
+  margin: 0;
+}
+
+.logoDiv{
+  max-height: inherit;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  object-fit: contain;
+  max-width: 150%;
+  max-height: 150%;
+}
+
+hr {
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
