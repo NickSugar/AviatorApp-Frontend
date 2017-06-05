@@ -4,12 +4,12 @@
   angular.module('aviatorsApp')
     .component('headerComp', {
       templateUrl: 'header.html',
-      controller: ['authService', headerCtrl],
-      bindings: {auth: '='}
+      controller: ['authService', headerCtrl]
     });
 
   function  headerCtrl(authService) {
         const vm = this
 
+        vm.auth = authService
     }
 }())
