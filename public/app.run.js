@@ -12,7 +12,9 @@
     // Handle the authentication
     // result in the hash
     authService.handleAuthentication()
-    $state.go('premium')
+    if (authService.isAuthenticated()) {
+      $state.go('premium')
+    }
   }
 
 })()
