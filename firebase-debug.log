@@ -1,0 +1,14 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/local/Cellar/node/7.9.0/bin/node /usr/local/bin/firebase serve
+[debug] CLI Version:  3.5.0
+[debug] Platform:     darwin
+[debug] Node Version: v7.9.0
+[debug] Time:         Mon Jun 05 2017 11:22:32 GMT-0600 (MDT)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[info] Project Directory: /Users/nicksugar/galvanize/projects/aviator/AviatorApp-Frontend
+[info] Public Directory: public
+[info] 
+[info] Server listening at: http://localhost:5000
