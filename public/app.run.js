@@ -6,12 +6,13 @@
     .module('aviatorsApp')
     .run(run)
 
-  run.$inject = ['authService']
+  run.$inject = ['authService', '$state']
 
-  function run(authService) {
+  function run(authService, $state) {
     // Handle the authentication
     // result in the hash
     authService.handleAuthentication()
+    $state.go('premium')
   }
 
 })()
