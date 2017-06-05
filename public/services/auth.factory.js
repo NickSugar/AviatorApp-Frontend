@@ -18,8 +18,10 @@
     service.isAuthenticated = isAuthenticated
 
     function login() {
-      angularAuth0.authorize();
-      $state.go('premium')
+      angularAuth0.authorize()
+        .then()=>{
+          $state.go('premium')
+        }
     }
 
     function handleAuthentication() {
