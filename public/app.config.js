@@ -22,7 +22,7 @@
       $stateProvider
       .state('home', {
         url: '/',
-        template: '<md-button class="md-primary">Pesant</md-button>'
+        template: '<home-comp></home-comp>'
       })
       .state('premium', {
         url: '/premium',
@@ -36,7 +36,7 @@
         responseType: 'token id_token',
         audience: 'https://nicksugar.auth0.com/userinfo',
         // redirectUri: 'http://localhost:5000/premium',
-        redirectUri: 'https://aviatorsapp.com',
+        redirectUri: 'https://aviatorsapp.com/premium',
         scope: 'openid'
       });
 

@@ -12,7 +12,6 @@
 
         vm.login = authService.login
         vm.logout = authService.logout
-        vm.isAuthenticated = authService.isAuthenticated
-        vm.authenticated = vm.isAuthenticated()
+        vm.authenticated = authService.authenticated
     }
 }())

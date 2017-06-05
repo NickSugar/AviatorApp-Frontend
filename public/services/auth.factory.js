@@ -16,9 +16,10 @@
     service.setSession = setSession
     service.logout = logout
     service.isAuthenticated = isAuthenticated
+    service.authenticated
 
     function login() {
-      angularAuth0.authorize()       
+      angularAuth0.authorize()
     }
 
     function handleAuthentication() {
