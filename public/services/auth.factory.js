@@ -26,10 +26,10 @@
       angularAuth0.parseHash(function(err, authResult) {
         if (authResult && authResult.accessToken && authResult.idToken) {
           setSession(authResult);
-          $state.go('premium');
+          $state.go('premiumHome');
         } else if (err) {
           $timeout(function() {
-            $state.go('premium');
+            $state.go('premiumHome');
           });
           console.log(err);
         }
