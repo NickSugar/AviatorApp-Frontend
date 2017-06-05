@@ -7,14 +7,14 @@
   </div>
   <md-nav-bar flex="10" md-selected-nav-item="currentNavItem">
     <md-nav-item
-      ng-if="!$ctrl.authenticated"
-      md-nav-click="$ctrl.login()">
+      ng-if="!auth.isAuthenticated()"
+      md-nav-click="auth.login()">
       Sign in
     </md-nav-item>
 
     <md-nav-item
-      ng-if="$ctrl.authenticated"
-      md-nav-click="$ctrl.logout()">
+      ng-if="auth.isAuthenticated()"
+      md-nav-click="auth.logout()">
       Sign out
     </md-nav-item>
     <div flex="10">

@@ -10,6 +10,6 @@
   function  homeCtrl(authService) {
         const vm = this
 
-        authService.authenticated = authService.isAuthenticated()
+        vm.auth = authService
     }
 }())

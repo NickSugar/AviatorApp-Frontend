@@ -24,10 +24,10 @@
         url: '/',
         template: '<home-comp></home-comp>'
       })
-      // .state('premium', {
-      //   url: '/premium',
-      //   template: '<md-button class="md-primary">Premium</md-button>'
-      // })
+      .state('premiumHome', {
+        url: '/premium',
+        template: '<premium-home></premium-home>'
+      })
 
       // Initialization for the angular-auth0 library
       angularAuth0Provider.init({
@@ -36,7 +36,7 @@
         responseType: 'token id_token',
         audience: 'https://nicksugar.auth0.com/userinfo',
         // redirectUri: 'http://localhost:5000/premium',
-        redirectUri: 'https://aviatorsapp.com',
+        redirectUri: 'https://aviatorsapp.com/premium',
         scope: 'openid'
       });
 
