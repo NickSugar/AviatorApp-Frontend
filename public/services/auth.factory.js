@@ -19,6 +19,7 @@
 
     function login() {
       angularAuth0.authorize();
+      $state.go('premium')
     }
 
     function handleAuthentication() {
