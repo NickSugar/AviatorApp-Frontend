@@ -13,7 +13,7 @@
     // Handle the authentication
     // result in the hash
     authService.handleAuthentication()
-    if (authService.isAuthenticated()) {
+    if (!authService.isAuthenticated()) {
       console.log('is authenticated');
       $state.go('premium')
     }
