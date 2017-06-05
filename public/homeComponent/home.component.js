@@ -13,9 +13,9 @@
         const vm = this
 
         vm.authenticated = authService.isAuthenticated()
-        console.log(authenticated);
+        console.log(vm.authenticated);
 
-        if (authenticated) {
+        if (vm.authenticated) {
           template = './homeComponent/premiumHome.html'
         }else {
           template = './homeComponent/home.html'
