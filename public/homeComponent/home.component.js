@@ -12,7 +12,7 @@
   function  homeCtrl(authService) {
         const vm = this
 
-        var authenticated = authService.isAuthenticated()
+        vm.authenticated = authService.isAuthenticated()
         console.log(authenticated);
 
         if (authenticated) {
@@ -21,6 +21,6 @@
           template = './homeComponent/home.html'
         }
 
-        // authService.authenticated = authenticated
+        authService.authenticated = vm.authenticated
     }
 }())
