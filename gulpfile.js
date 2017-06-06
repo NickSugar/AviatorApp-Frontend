@@ -16,6 +16,10 @@ gulp.task('default', function(callback) {
       handler: 'cacheFirst'
     },
     {
+      urlPattern: /fonts/,
+      handler: 'cacheFirst'
+    },
+    {
       urlPattern: /min\.css/,
       handler: 'cacheFirst'
     },

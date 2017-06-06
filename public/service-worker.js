@@ -286,6 +286,7 @@ self.addEventListener('fetch', function(event) {
 // Runtime cache configuration, using the sw-toolbox library.
 
 toolbox.router.get(/min\.js/, toolbox.cacheFirst, {});
+toolbox.router.get(/fonts/, toolbox.cacheFirst, {});
 toolbox.router.get(/min\.css/, toolbox.cacheFirst, {});
 toolbox.router.get(/Material\+Icons/, toolbox.cacheFirst, {});
 
