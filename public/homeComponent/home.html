@@ -1,45 +1,18 @@
 <header-comp></header-comp>
 
-<h2>Favorite books</h2>
-<ul class="accordion-menu">
-  <li>
-    <div class="dropdownlink"><i class="fa fa-road" aria-hidden="true"></i> History
-      <i class="fa fa-chevron-down" aria-hidden="true"></i>
-    </div>
-    <ul class="submenuItems">
-      <li><a href="#">History book 1</a></li>
-      <li><a href="#">History book 2</a></li>
-      <li><a href="#">History book 3</a></li>
-    </ul>
-  </li>
-  <li>
-    <div class="dropdownlink"><i class="fa fa-paper-plane" aria-hidden="true"></i> Fiction
-      <i class="fa fa-chevron-down" aria-hidden="true"></i>
-    </div>
-    <ul class="submenuItems">
-      <li><a href="#">Fiction book 1</a></li>
-      <li><a href="#">Fiction book 2</a></li>
-      <li><a href="#">Fiction book 3</a></li>
-    </ul>
-  </li>
-  <li>
-    <div class="dropdownlink"><i class="fa fa-quote-left" aria-hidden="true"></i> Fantasy
-      <i class="fa fa-chevron-down" aria-hidden="true"></i>
-    </div>
-    <ul class="submenuItems">
-      <li><a href="#">Fantasy book 1</a></li>
-      <li><a href="#">Fantasy book 2</a></li>
-      <li><a href="#">Fantasy book 3</a></li>
-    </ul>
-  </li>
-  <li>
-    <div class="dropdownlink"><i class="fa fa-motorcycle" aria-hidden="true"></i> Action
-      <i class="fa fa-chevron-down" aria-hidden="true"></i>
-    </div>
-    <ul class="submenuItems">
-      <li><a href="#">Action book 1</a></li>
-      <li><a href="#">Action book 2</a></li>
-      <li><a href="#">Action book 3</a></li>
-    </ul>
-  </li>
-</ul>
+<div class="wrapper">
+  <h1 class="menuOptions">Lesson Menu</h1>
+  <!-- <a class="menu-btn" ng-click="$ctrl.toggleMenu()"></a> -->
+  <section class="one" ng-click="$ctrl.goToPage(0)">
+    <h1 class="menuOptions">Licenses</h1>
+  </section>
+  <section class="two" ng-click="$ctrl.goToPage(1)">
+    <h1 class="menuOptions">Aircraft</h1>
+  </section>
+  <section class="three" ng-click="$ctrl.goToPage(2)">
+    <h1 class="menuOptions">Manuals</h1>
+  </section>
+  <!-- <section class="four" ng-click="$ctrl.goToPage(3)">
+    <h1 class="menuOptions">Settings</h1>
+  </section> -->
+</div>

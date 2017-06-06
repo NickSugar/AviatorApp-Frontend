@@ -1,31 +1,20 @@
-<header class="header" layout="row">
+<header class="header" layout="row" layout-align="center center">
+
   <div class="logoDiv" flex="20">
     <img class="logo" src="assets/aviatorsicon.png" alt="aviators app logo">
   </div>
+
   <div class="appNameDiv" flex="60">
     <h1 class="appName">Aviators App</h1>
   </div>
-  <!-- <md-nav-bar flex="10" md-selected-nav-item="currentNavItem">
-    <md-nav-item
-      ng-if="!$ctrl.auth.isAuthenticated()"
-      md-nav-click="$ctrl.auth.login()">
-      <p class="btnText">Sign in</p>
-
-    </md-nav-item>
-
-    <md-nav-item
-      ng-if="$ctrl.auth.isAuthenticated()"
-      md-nav-click="$ctrl.auth.logout()">
-      <p class="btnText">Sign out</p>
-    </md-nav-item>
-  </md-nav-bar> -->
-  <md-button flex="10" class="md-primary md-raised"
+  
+  <md-button flex="10" class="signBtn md-primary md-raised"
     ng-if="!$ctrl.auth.isAuthenticated()"
     ng-click="$ctrl.auth.login()">
     <p class="btnText">Sign in</p>
   </md-button>
 
-  <md-button flex="10" class="md-warn md-raised"
+  <md-button flex="10" class="signBtn md-warn md-raised"
     ng-if="$ctrl.auth.isAuthenticated()"
     ng-click="$ctrl.auth.logout()">
     <p class="btnText">Sign out</p>
@@ -34,5 +23,6 @@
   <div flex="10">
 
   </div>
+
 </header>
 <hr>

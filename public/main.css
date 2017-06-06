@@ -13,6 +13,15 @@ main {
 
 .btnText{
   font-family: 'El Messiri', sans-serif;
+  margin-top: .12em;
+}
+
+.signBtn{
+  height: 2em;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .appNameDiv{

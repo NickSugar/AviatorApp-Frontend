@@ -11,35 +11,32 @@
         const vm = this
 
         vm.auth = authService
+        vm.toggleMenu = toggleMenu
+        vm.goToPage = goToPage
 
-        // $(function() {
-        //     var Accordion = function(el, multiple) {
-        //       this.el = el || {};
-        //       // more then one submenu open?
-        //       this.multiple = multiple || false;
-        //
-        //       var dropdownlink = this.el.find('.dropdownlink');
-        //       dropdownlink.on('click',
-        //                       { el: this.el, multiple: this.multiple },
-        //                       this.dropdown);
-        //     };
-        //
-        //     Accordion.prototype.dropdown = function(e) {
-        //       var $el = e.data.el,
-        //           $this = $(this),
-        //           //this is the ul.submenuItems
-        //           $next = $this.next();
-        //
-        //       $next.slideToggle();
-        //       $this.parent().toggleClass('open');
-        //
-        //       if(!e.data.multiple) {
-        //         //show only one menu at the same time
-        //         $el.find('.submenuItems').not($next).slideUp().parent().removeClass('open');
-        //       }
-        //     }
-        //
-        //     var accordion = new Accordion($('.accordion-menu'), false);
-        //   })
+        var pages = new Array('one', 'two', 'three', 'four');
+        var menuClosed = true
+
+        function toggleMenu() {
+          if (menuClosed) {
+            document.getElementsByClassName('wrapper')[0].classList.toggle('menu-open');
+          }
+        }
+        toggleMenu()
+
+        function goToPage(page) {
+          var wrapper = document.getElementsByClassName('wrapper')[0];
+          var sections = document.getElementsByTagName('section');
+          for (var i = 0; i < sections.length; i++) {
+            sections[i].classList.remove('before','after');
+            if (i > page) {
+              sections[i].classList.add('after');
+            }
+          }
+          wrapper.classList.remove('menu-open','page-one','page-two');
+          wrapper.classList.add('page-' + pages[page]);
+          menuClosed = !menuClosed
+          toggleMenu()
+        }
       }
 }())
