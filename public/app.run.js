@@ -11,7 +11,7 @@
   function run(authService, $state) {
     // Handle the authentication
     // result in the hash
-    authService.handleAuthentication()
+    // authService.handleAuthentication()
   }
 
 })()

@@ -29,7 +29,7 @@
           $state.go('premiumHome');
         } else if (err) {
           $timeout(function() {
-            $state.go('premiumHome');
+            $state.go('home');
           });
           console.log(err);
         }
