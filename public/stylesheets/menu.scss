@@ -1,49 +1,20 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 
-$color1: #f75b5b;
-$color2: #c84051;
-$color3: #4f3462;
+$color1: hsl(240, 100, 50);
+$color2: hsl(122, 100, 10);
+$color3: hsl(200, 100, 40);
 $color4: #794d9a;
 
-* {
-  font-family: inherit;
-  -webkit-font-smoothing: antialiased;
-}
-
-html {
-  font-size: 62.5%;
-  font-family: 'Lato', sans-serif;
-}
-
-// body {
-//  background: #1f252d;
-// }
+$font: 'El Messiri', sans-serif;
 
 .wrapper {
   height: 90vh;
   width: 90%;
-  background: #2e394b;
+  background: hsl(0, 0, 0);
   overflow: hidden;
   position: relative;
   margin: 20px auto 0;
   border-radius: 25px 25px 0 0;
-}
-
-.menu-btn {
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  height: 70px;
-  width: 54px;
-  cursor: pointer;
-  background: url(https://iamturner.co.uk/codepen/menu-icon.png) no-repeat center;
-  background-size: 44px;
-
-  &:active {
-    opacity: 0.2;
-  }
-
 }
 
 section {
@@ -81,14 +52,24 @@ section {
 
 }
 
-.menuOptions {
+.menuTitle {
+  font-family: $font;
+  font-size: 1.5rem;
   color: white;
   font-weight: 500;
-  font-size: 2rem;
   text-align: center;
   margin: 0;
   line-height: 70px;
-  -webkit-user-select: none;
+}
+
+.menuOptions {
+  font-family: $font;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+  line-height: 70px;
 }
 
 .page-one {

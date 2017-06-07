@@ -1,33 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
-* {
-  font-family: inherit;
-  -webkit-font-smoothing: antialiased; }
-
-html {
-  font-size: 62.5%;
-  font-family: 'Lato', sans-serif; }
-
 .wrapper {
   height: 90vh;
   width: 90%;
-  background: #2e394b;
+  background: black;
   overflow: hidden;
   position: relative;
   margin: 20px auto 0;
   border-radius: 25px 25px 0 0; }
-
-.menu-btn {
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  height: 70px;
-  width: 54px;
-  cursor: pointer;
-  background: url(https://iamturner.co.uk/codepen/menu-icon.png) no-repeat center;
-  background-size: 44px; }
-  .menu-btn:active {
-    opacity: 0.2; }
 
 section {
   position: absolute;
@@ -38,13 +17,13 @@ section {
   border-radius: 25px 25px 0 0;
   -webkit-transition: -webkit-transform 0.3s; }
   section.one {
-    background: #f75b5b;
+    background: blue;
     -webkit-transition-delay: 0s; }
   section.two {
-    background: #c84051;
+    background: #003302;
     -webkit-transition-delay: 0.05s; }
   section.three {
-    background: #4f3462;
+    background: #0088cc;
     -webkit-transition-delay: 0.1s; }
   section.four {
     background: #794d9a;
@@ -52,14 +31,23 @@ section {
   section.after {
     -webkit-transform: translateY(100%); }
 
-.menuOptions {
+.menuTitle {
+  font-family: "El Messiri", sans-serif;
+  font-size: 1.5rem;
   color: white;
   font-weight: 500;
-  font-size: 2rem;
   text-align: center;
   margin: 0;
-  line-height: 70px;
-  -webkit-user-select: none; }
+  line-height: 70px; }
+
+.menuOptions {
+  font-family: "El Messiri", sans-serif;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+  line-height: 70px; }
 
 .page-one section.one {
   -webkit-transition-delay: 0s; }
@@ -85,17 +73,17 @@ section {
     -webkit-transform: translateY(70px);
     -webkit-transition-delay: 0.15s; }
     .menu-open section.one:active {
-      background: #f86a6a; }
+      background: #0f0fff; }
   .menu-open section.two {
     -webkit-transform: translateY(140px);
     -webkit-transition-delay: 0.1s; }
     .menu-open section.two:active {
-      background: #cb4c5c; }
+      background: #004202; }
   .menu-open section.three {
     -webkit-transform: translateY(210px);
     -webkit-transition-delay: 0.05s; }
     .menu-open section.three:active {
-      background: #57396c; }
+      background: #0092db; }
   .menu-open section.four {
     -webkit-transform: translateY(280px);
     -webkit-transition-delay: 0s; }
