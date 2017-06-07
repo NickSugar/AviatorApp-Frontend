@@ -25,6 +25,7 @@
         toggleMenu()
 
         function goToPage(page) {
+          if (page === 0) return
           var wrapper = document.getElementsByClassName('wrapper')[0];
           var sections = document.getElementsByTagName('section');
           for (var i = 0; i < sections.length; i++) {

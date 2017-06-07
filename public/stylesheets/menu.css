@@ -1,4 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
+* {
+  font-family: "El Messiri", sans-serif; }
+
 .wrapper {
   height: 90vh;
   width: 90%;
@@ -9,6 +12,10 @@
   border-radius: 25px 25px 0 0; }
 
 section {
+  outline: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -31,16 +38,27 @@ section {
   section.after {
     -webkit-transform: translateY(100%); }
 
+.noAuth {
+  position: absolute;
+  margin: 0 0 0 -3.5em;
+  color: rgba(255, 0, 0, 0.6);
+  font-family: "El Messiri", sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 70px;
+  transform: rotate(-10deg); }
+
 .menuTitle {
   font-family: "El Messiri", sans-serif;
   font-size: 1.5rem;
   color: white;
   font-weight: 500;
   text-align: center;
-  margin: 0;
-  line-height: 70px; }
+  margin: 0; }
 
 .menuOptions {
+  display: block;
   font-family: "El Messiri", sans-serif;
   color: white;
   font-weight: 500;
@@ -48,6 +66,26 @@ section {
   text-align: center;
   margin: 0;
   line-height: 70px; }
+
+.cards {
+  height: 12em; }
+
+.cardContent {
+  height: 100%;
+  overflow: hidden; }
+
+.discription {
+  width: 100%;
+  height: 60%;
+  overflow-y: scroll;
+  padding-right: 17px;
+  /* Increase/decrease this value for cross-browser compatibility */ }
+
+.planeImg {
+  max-width: 13em;
+  max-height: 10em;
+  object-fit: cover;
+  margin-left: 1em; }
 
 .page-one section.one {
   -webkit-transition-delay: 0s; }
