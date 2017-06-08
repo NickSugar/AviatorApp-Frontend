@@ -12,6 +12,8 @@
 
     var service = {}
 
+    service.getPlanes = getPlanes
+
     function getPlanes() {
       return $http('https://aviatorsapp.herokuapp.com/planes')
     }
