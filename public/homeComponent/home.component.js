@@ -4,15 +4,16 @@
   angular.module('aviatorsApp')
     .component('homeComp', {
       templateUrl: './homeComponent/home.html',
-      controller: ['authService', homeCtrl]
+      controller: ['authService', 'aviatorsAPIservice', homeCtrl]
     });
 
-  function  homeCtrl(authService) {
+  function  homeCtrl(authService, aviatorsAPIservice) {
         const vm = this
 
         vm.auth = authService
         vm.toggleMenu = toggleMenu
         vm.goToPage = goToPage
+        vm.planes = aviatorsAPIservice.getPlanes()
 
         var pages = new Array('one', 'two', 'three', 'four');
         var menuClosed = true

@@ -13,16 +13,17 @@
   <section layout="column" layout-align="start center" class="two" ng-click="$ctrl.goToPage(1)">
     <h1 class="menuOptions">Aircraft</h1>
 
-    <md-card class="cards" layout="row" layout-align="center center">
+    <md-card ng-repeat="plane in $ctrl.planes" class="cards" layout="row" layout-align="center center">
        <img src="assets/images/gobosh.jpg" class="planeImg sm-card-image" alt="gobosh image">
        <md-card-content class="cardContent">
-         <h2>Gobosh 700</h2>
-         <p class="discription">This American light-sport aircraft was designed to comply with the US light-sport aircraft rules. It features a cantilever low-wing, a two-seats-in-side-by-side configuration enclosed open cockpit under a bubble canopy, fixed tricycle landing gear and a single engine in tractor configuration.</p>
+         <h2>{{plane.name}}</h2>
+         <p class="discription">{{plane.discription}}</p>
        </md-card-content>
        <md-card-actions layout="row" layout-align="end center">
          <md-button>Let's Fly!</md-button>
        </md-card-actions>
     </md-card>
+
   </section>
 
   <section class="three" ng-click="$ctrl.goToPage(2)">

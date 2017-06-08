@@ -20,7 +20,7 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 200vh;
   border-radius: 25px 25px 0 0;
   -webkit-transition: -webkit-transform 0.3s; }
   section.one {
@@ -76,7 +76,7 @@ section {
 
 .discription {
   width: 100%;
-  height: 60%;
+  height: 50%;
   overflow-y: scroll;
   padding-right: 17px;
   /* Increase/decrease this value for cross-browser compatibility */ }
