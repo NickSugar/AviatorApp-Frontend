@@ -10,14 +10,13 @@
 
   function aviatorsAPIservice($http) {
 
-    var service = {}
+    const vm = this
+    vm.service = {}
 
-    service.getPlanes = getPlanes
-
-    function getPlanes() {
-      return $http('https://aviatorsapp.herokuapp.com/planes')
+    vm.service.getPlanes = ()=> {
+      return $http.get('https://aviatorsapp.herokuapp.com/planes')
     }
 
-    return service
+    return vm.service
   }
 })();
