@@ -24,6 +24,7 @@
         function lessons(name) {
             aviatorsAPIservice.getLessons(name)
               .then(lessons=>{
+                console.log(lessons);
                 $state.go('lessons', {lessons: lessons})
               })
         }

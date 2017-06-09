@@ -30,7 +30,10 @@
       })
       .state('lessons', {
         url: '/lessons',
-        template: '<lessons></lessons>'
+        template: '<lessons></lessons>',
+        params: {
+          lessons: null
+        }
       })
 
       // Initialization for the angular-auth0 library

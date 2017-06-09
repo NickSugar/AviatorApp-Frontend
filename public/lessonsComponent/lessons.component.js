@@ -23,6 +23,6 @@
 
         vm.auth = authService
 
-        console.log($stateParams);
+        console.log($stateParams.lessons);
       }
 }())
