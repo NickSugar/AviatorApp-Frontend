@@ -1,11 +1,9 @@
-body {
-  /*background-color: rgb(137, 204, 237);*/
-}
 
 main {
   margin: 0 15px 0 10px;
   padding-top: 10px;
-  background-color: rgb(137, 204, 237);
+  /*background-color: rgba(115, 144, 160, 1);*/
+  background-image: url('assets/images/sky.jpg');
 }
 
 .header{

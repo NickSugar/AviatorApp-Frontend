@@ -14,13 +14,13 @@
     <h1 class="menuOptions">Aircraft</h1>
 
     <md-card ng-repeat="plane in $ctrl.planes" class="cards" layout="row" layout-align="center center">
-       <img src="assets/images/gobosh.jpg" class="planeImg sm-card-image" alt="gobosh image">
+       <img src="{{plane.img_url}}" class="planeImg sm-card-image" alt="gobosh image">
        <md-card-content class="cardContent">
          <h2>{{plane.name}}</h2>
-         <p class="discription">{{plane.discription}}</p>
+         <p class="description">{{plane.description}}</p>
        </md-card-content>
        <md-card-actions layout="row" layout-align="end center">
-         <md-button>Let's Fly!</md-button>
+         <md-button ng-click="$ctrl.lessons(plane.name)" class="md-primary md-raised">Let's Fly!</md-button>
        </md-card-actions>
     </md-card>
 

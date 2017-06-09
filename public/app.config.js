@@ -28,6 +28,10 @@
         url: '/premium',
         template: '<premium-home></premium-home>'
       })
+      .state('lessons', {
+        url: '/lessons',
+        template: '<lessons></lessons>'
+      })
 
       // Initialization for the angular-auth0 library
       angularAuth0Provider.init({
