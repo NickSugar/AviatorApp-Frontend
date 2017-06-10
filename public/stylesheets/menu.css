@@ -63,5 +63,12 @@
     object-fit: cover;
     margin-left: 1em;
     border-radius: 12px; } }
+.menuItemName {
+  display: inline;
+  padding: 0 3vw; }
+
+.lessonBtn {
+  display: inline;
+  padding: 0 3vw; }
 
 /*# sourceMappingURL=menu.css.map */

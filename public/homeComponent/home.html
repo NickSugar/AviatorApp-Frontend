@@ -31,12 +31,12 @@
         <md-card ng-repeat="plane in $ctrl.planes" class="cards" layout-xs="column" layout="row" layout-align="center center">
            <img src="{{plane.img_url}}" class="planeImg sm-card-image" alt="gobosh image">
            <md-card-content class="cardContent">
-             <h2>{{plane.fullName}}</h2>
+             <h2 class="menuItemName">{{plane.fullName}}</h2>
+             <md-card-actions class="lessonBtn" layout="row" layout-align="end center">
+               <md-button ng-click="$ctrl.lessons(plane.name)" class="md-primary md-raised">Let's Fly!</md-button>
+             </md-card-actions>
              <p class="description">{{plane.description}}</p>
            </md-card-content>
-           <md-card-actions layout="row" layout-align="end center">
-             <md-button ng-click="$ctrl.lessons(plane.name)" class="md-primary md-raised">Let's Fly!</md-button>
-           </md-card-actions>
         </md-card>
 
       </md-content>
