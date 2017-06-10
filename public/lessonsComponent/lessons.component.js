@@ -22,7 +22,6 @@
         const vm = this
 
         vm.auth = authService
-
-        console.log($stateParams.lessons);
+        vm.lessons = $stateParams.lessons.data
       }
 }())

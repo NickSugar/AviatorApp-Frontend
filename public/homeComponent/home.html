@@ -1,33 +1,46 @@
 <header-comp></header-comp>
 
-<div class="wrapper">
+<div class="menu">
+
   <h1 class="menuTitle">Lesson Menu</h1>
 
-  <section class="one" ng-click="$ctrl.goToPage(0)">
-    <div class="noAuthContainer">
-      <h1 class="noAuth">Sign up for these lessons</h1>
-      <h1 class="menuOptions">Licenses</h1>
-    </div>
-  </section>
 
-  <section layout="column" layout-align="start center" class="two" ng-click="$ctrl.goToPage(1)">
-    <h1 class="menuOptions">Aircraft</h1>
+  <md-content class="content md-padding">
 
-    <md-card ng-repeat="plane in $ctrl.planes" class="cards" layout="row" layout-align="center center">
-       <img src="{{plane.img_url}}" class="planeImg sm-card-image" alt="gobosh image">
-       <md-card-content class="cardContent">
-         <h2>{{plane.name}}</h2>
-         <p class="description">{{plane.description}}</p>
-       </md-card-content>
-       <md-card-actions layout="row" layout-align="end center">
-         <md-button ng-click="$ctrl.lessons(plane.name)" class="md-primary md-raised">Let's Fly!</md-button>
-       </md-card-actions>
-    </md-card>
+    <md-nav-bar
+      md-selected-nav-item="currentNavItem"
+      nav-bar-aria-label="navigation links">
+      <md-nav-item md-nav-click="$ctrl.open('licenses')" md-nav-focus name="licenses">
+        Licenses
+      </md-nav-item>
+      <md-nav-item md-nav-click="$ctrl.open('aircraft')" name="aircraft">
+        Aircraft
+      </md-nav-item>
+      <md-nav-item md-nav-click="$ctrl.open('manuals')" name="manuals">
+        Manuals
+      </md-nav-item>
 
-  </section>
+    </md-nav-bar>
 
-  <section class="three" ng-click="$ctrl.goToPage(2)">
-    <h1 class="menuOptions">Manuals</h1>
+  </md-content>
+
+  <section class="menuSection">
+
+      <md-content ng-show="$ctrl.showAircraft" layout="column" layout-align="start center" class="content" ng-click="$ctrl.goToPage(1)">
+
+        <md-card ng-repeat="plane in $ctrl.planes" class="cards" layout-xs="column" layout="row" layout-align="center center">
+           <img src="{{plane.img_url}}" class="planeImg sm-card-image" alt="gobosh image">
+           <md-card-content class="cardContent">
+             <h2>{{plane.fullName}}</h2>
+             <p class="description">{{plane.description}}</p>
+           </md-card-content>
+           <md-card-actions layout="row" layout-align="end center">
+             <md-button ng-click="$ctrl.lessons(plane.name)" class="md-primary md-raised">Let's Fly!</md-button>
+           </md-card-actions>
+        </md-card>
+
+      </md-content>
+
   </section>
 
 </div>

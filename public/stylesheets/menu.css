@@ -1,42 +1,6 @@
 * {
   font-family: "El Messiri", sans-serif; }
 
-.wrapper {
-  height: 150vh;
-  width: 90%;
-  background: black;
-  overflow: hidden;
-  position: relative;
-  margin: 20px auto 0;
-  border-radius: 25px 25px 0 0; }
-
-section {
-  outline: 0;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 150vh;
-  border-radius: 25px 25px 0 0;
-  -webkit-transition: -webkit-transform 0.3s; }
-  section.one {
-    background: blue;
-    -webkit-transition-delay: 0s; }
-  section.two {
-    background: #2e5ee0;
-    -webkit-transition-delay: 0.05s; }
-  section.three {
-    background: #46a1e2;
-    -webkit-transition-delay: 0.1s; }
-  section.four {
-    background: #794d9a;
-    -webkit-transition-delay: 0.15s; }
-  section.after {
-    -webkit-transform: translateY(100%); }
-
 .noAuth {
   position: absolute;
   margin: 0 0 0 -3.5em;
@@ -54,93 +18,50 @@ section {
   text-align: center;
   margin: 0; }
 
-.menuOptions {
-  display: block;
-  color: white;
-  font-weight: 500;
-  font-size: 1rem;
-  text-align: center;
-  margin: 0;
-  line-height: 70px; }
+.menu {
+  height: 78vh;
+  overflow: hidden; }
+
+.menuSection {
+  height: 78%;
+  overflow-y: scroll; }
+
+.content {
+  background-color: transparent; }
 
 .cards {
   background-color: #c5c6d3;
-  height: 12em;
-  border-radius: 15px; }
+  border-radius: 15px;
+  padding: 10px; }
 
 .cardContent {
   height: 100%;
-  overflow: hidden; }
+  padding: 15px 0; }
 
 .description {
-  width: 100%;
-  height: 50%;
-  overflow-y: scroll;
+  padding: 0;
   padding-right: 17px;
   /* Increase/decrease this value for cross-browser compatibility */ }
 
-.planeImg {
-  max-width: 13em;
-  max-height: 10em;
-  object-fit: cover;
-  margin-left: 1em;
-  border-radius: 12px; }
-
-.page-one section.one {
-  -webkit-transition-delay: 0s; }
-.page-one section.two {
-  -webkit-transition-delay: 0.15s; }
-.page-one section.three {
-  -webkit-transition-delay: 0.1s; }
-.page-one section.four {
-  -webkit-transition-delay: 0.05s; }
-
-.page-two section.one {
-  -webkit-transition-delay: 0s; }
-.page-two section.two {
-  -webkit-transition-delay: 0.05s; }
-.page-two section.three {
-  -webkit-transition-delay: 0.1s; }
-.page-two section.four {
-  -webkit-transition-delay: 0.05s; }
-
-.menu-open section {
-  cursor: pointer; }
-  .menu-open section.one {
-    -webkit-transform: translateY(70px);
-    -webkit-transition-delay: 0.15s; }
-    .menu-open section.one:active {
-      background: #0f0fff; }
-  .menu-open section.two {
-    -webkit-transform: translateY(140px);
-    -webkit-transition-delay: 0.1s; }
-    .menu-open section.two:active {
-      background: #3c68e2; }
-  .menu-open section.three {
-    -webkit-transform: translateY(210px);
-    -webkit-transition-delay: 0.05s; }
-    .menu-open section.three:active {
-      background: #53a8e4; }
-  .menu-open section.four {
-    -webkit-transform: translateY(280px);
-    -webkit-transition-delay: 0s; }
-    .menu-open section.four:active {
-      background: #8152a4; }
-.menu-open.page-one section.one {
-  -webkit-transition-delay: 0s; }
-.menu-open.page-one section.two {
-  -webkit-transition-delay: 0.05s; }
-.menu-open.page-one section.three {
-  -webkit-transition-delay: 0.1s; }
-.menu-open.page-one section.four {
-  -webkit-transition-delay: 0.15s; }
-.menu-open.page-two section.one {
-  -webkit-transition-delay: 0s; }
-.menu-open.page-two section.two {
-  -webkit-transition-delay: 0.05s; }
-.menu-open.page-two section.three {
-  -webkit-transition-delay: 0.1s; }
-.menu-open.page-two section.four {
-  -webkit-transition-delay: 0.15s; }
+@media (max-width: 480px) {
+  .planeImg {
+    max-width: 100%;
+    max-height: 90%;
+    object-fit: cover;
+    border-radius: 6px; } }
+@media (min-width: 481px) and (max-width: 768px) {
+  .planeImg {
+    max-width: 20vw;
+    max-height: 40vh;
+    object-fit: cover;
+    margin-left: 1em;
+    border-radius: 12px; } }
+@media (min-width: 769px) {
+  .planeImg {
+    max-width: 20vw;
+    max-height: 40vh;
+    object-fit: cover;
+    margin-left: 1em;
+    border-radius: 12px; } }
 
 /*# sourceMappingURL=menu.css.map */

@@ -11,9 +11,14 @@
         const vm = this
 
         vm.auth = authService
+
         vm.lessons = lessons
-        vm.toggleMenu = toggleMenu
-        vm.goToPage = goToPage
+        vm.open = open
+
+        vm.showAircraft = true
+        vm.showLicenses = false
+        vm.showManuals = false
+
         vm.planes = []
 
         aviatorsAPIservice.getPlanes()
@@ -21,38 +26,27 @@
             vm.planes = planes.data
           })
 
+        function open(menuPage) {
+          if (menuPage === 'licenses') {
+            vm.showAircraft = false
+            vm.showManuals = false
+            vm.showLicenses = true
+          }else if (menuPage === 'aircraft') {
+            vm.showManuals = false
+            vm.showLicenses = false
+            vm.showAircraft = true
+          }else {
+            vm.showLicenses = false
+            vm.showAircraft = false
+            vm.showManuals = true
+          }
+        }
+
         function lessons(name) {
             aviatorsAPIservice.getLessons(name)
               .then(lessons=>{
-                console.log(lessons);
                 $state.go('lessons', {lessons: lessons})
               })
-        }
-
-        var pages = new Array('one', 'two', 'three', 'four');
-        var menuClosed = true
-
-        function toggleMenu() {
-          if (menuClosed) {
-            document.getElementsByClassName('wrapper')[0].classList.toggle('menu-open');
-          }
-        }
-        toggleMenu()
-
-        function goToPage(page) {
-          if (page === 0) return
-          var wrapper = document.getElementsByClassName('wrapper')[0];
-          var sections = document.getElementsByTagName('section');
-          for (var i = 0; i < sections.length; i++) {
-            sections[i].classList.remove('before','after');
-            if (i > page) {
-              sections[i].classList.add('after');
-            }
-          }
-          wrapper.classList.remove('menu-open','page-one','page-two');
-          wrapper.classList.add('page-' + pages[page]);
-          menuClosed = !menuClosed
-          toggleMenu()
         }
       }
 }())

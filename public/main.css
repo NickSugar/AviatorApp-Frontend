@@ -1,9 +1,12 @@
+body {
+  padding: 10px;
+  background-image: url('assets/images/sky.jpg');
+}
 
 main {
-  margin: 0 15px 0 10px;
+  margin: 0;
   padding-top: 10px;
   /*background-color: rgba(115, 144, 160, 1);*/
-  background-image: url('assets/images/sky.jpg');
 }
 
 .header{
