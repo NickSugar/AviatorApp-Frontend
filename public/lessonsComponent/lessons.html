@@ -1,3 +1,10 @@
 <header-comp></header-comp>
 
-test
+<h1>{{$ctrl.lessonOn}}</h1>
+
+<md-content ng-repeat="lesson in $ctrl.lessons">
+  <h2>{{lesson.name}}</h2>
+  <p>{{lesson.description}}</p>
+
+</md-content>
+<md-button class="md-raised md-primary">Start Lesson</md-button>

@@ -43,10 +43,10 @@
           }
         }
 
-        function lessons(name) {
+        function lessons(name, fullName) {
             aviatorsAPIservice.getLessons(name)
               .then(lessons=>{
-                $state.go('lessons', {lessons: lessons})
+                $state.go('lessons', {lessons: lessons, lessonsOn: fullName})
               })
         }
       }
