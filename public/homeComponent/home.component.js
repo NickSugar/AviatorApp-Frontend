@@ -24,6 +24,7 @@
         aviatorsAPIservice.getPlanes()
           .then(planes=>{
             vm.planes = planes.data
+            localStorage.setItem('1234', 'red')
           })
 
         function open(menuPage) {
