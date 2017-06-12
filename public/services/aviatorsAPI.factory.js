@@ -36,10 +36,14 @@
     }
 
 //======================
-// License routes
+// Lessons routes
 //======================
     vm.service.getLessons = (lessonsOn)=>{
       return $http.get('https://aviatorsapp.herokuapp.com/lessons/'+lessonsOn)
+    }
+
+    vm.service.getLessonContent = (lesson_id)=>{
+      return $http.get('https://aviatorsapp.herokuapp.com/lessons/'+lesson_id+'/lessonContents')
     }
 //======================
 // routes

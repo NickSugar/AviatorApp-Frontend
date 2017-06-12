@@ -46,7 +46,8 @@
         function lessons(name, fullName) {
             aviatorsAPIservice.getLessons(name)
               .then(lessons=>{
-                $state.go('lessons', {lessons: lessons, lessonsOn: fullName})
+                var params = {lessons: lessons, fullName: fullName}
+                $state.go('lessons', {params: params})
               })
         }
       }

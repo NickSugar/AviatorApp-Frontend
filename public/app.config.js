@@ -32,7 +32,14 @@
         url: '/lessons',
         template: '<lessons></lessons>',
         params: {
-          lessons: null
+          params: null
+        }
+      })
+      .state('lesson', {
+        url: '/lesson',
+        template: '<lesson></lesson>',
+        params: {
+          content: null
         }
       })
 

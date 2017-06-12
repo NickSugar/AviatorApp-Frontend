@@ -1,10 +1,39 @@
 <header-comp></header-comp>
 
-<h1>{{$ctrl.lessonOn}}</h1>
 
-<md-content ng-repeat="lesson in $ctrl.lessons">
-  <h2>{{lesson.name}}</h2>
-  <p>{{lesson.description}}</p>
+<section class="viewScreen">
 
-</md-content>
-<md-button class="md-raised md-primary">Start Lesson</md-button>
+  <h1 class="menuTitle">Lesson Menu</h1>
+
+
+  <md-content class="content md-padding">
+
+    <md-nav-bar
+      md-selected-nav-item="currentNavItem"
+      nav-bar-aria-label="navigation links">
+      <md-nav-item md-nav-click="" name="licenses">
+        Licenses
+      </md-nav-item>
+      <md-nav-item md-nav-click="" name="aircraft">
+        Aircraft
+      </md-nav-item>
+      <md-nav-item md-nav-click="" name="manuals">
+        Manuals
+      </md-nav-item>
+
+    </md-nav-bar>
+
+  </md-content>
+
+  <h1 class="content">{{$ctrl.lessonOn}}</h1>
+  <section class="contentSection">
+
+    <md-content class="content" ng-repeat="lesson in $ctrl.lessons">
+      <h2>{{lesson.name}}</h2>
+      <p>{{lesson.description}}</p>
+      <p>{{lesson.id}}</p>
+
+      <md-button ng-click="$ctrl.start(lesson.id)" class="md-raised md-primary content">Start Lesson</md-button>
+    </md-content>
+  </section>
+</section>

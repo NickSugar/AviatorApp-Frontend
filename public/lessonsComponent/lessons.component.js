@@ -22,9 +22,17 @@
         const vm = this
 
         vm.auth = authService
-        vm.lessons = $stateParams.lessons.data
-        vm.lessonOn = $stateParams.lessonOn
+        vm.lessons = $stateParams.params.lessons.data
+        vm.lessonOn = $stateParams.params.fullName
+        vm.start = start
 
-        console.log(vm.lessons);
+        function start(lesson_id) {
+          console.log('start');
+          aviatorsAPIservice.getLessonContent(lesson_id)
+            .then(content=>{
+              console.log(content);
+              $state.go('lesson', {content: content})
+            })
+        }
       }
 }())
