@@ -8,23 +8,20 @@
     });
 
   function  homeCtrl(authService, aviatorsAPIservice, $state) {
-        const vm = this
 
-        vm.auth = authService
-
-        vm.lessons = lessons
-        vm.open = open
-
-        vm.showAircraft = true
-        vm.showLicenses = false
-        vm.showManuals = false
-
-        vm.planes = []
+        const vm = Object.assign(this, {
+          auth: authService,
+          lessons,
+          open,
+          showAircraft: true,
+          showLicenses: false,
+          showManuals: false,
+          planes: []
+        })
 
         aviatorsAPIservice.getPlanes()
           .then(planes=>{
             vm.planes = planes.data
-            localStorage.setItem('1234', 'red')
           })
 
         function open(menuPage) {
@@ -46,8 +43,8 @@
         function lessons(name, fullName) {
             aviatorsAPIservice.getLessons(name)
               .then(lessons=>{
-                var params = {lessons: lessons, fullName: fullName}
-                $state.go('lessons', {params: params})
+                var params = {lessons, fullName}
+                $state.go('lessons', {params})
               })
         }
       }

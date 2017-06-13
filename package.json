@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "angular-auth0": "beta",
+    "angular-pdf": "^2.0.0",
     "auth0-js": "^8.7.0",
     "gulp": "^3.9.1",
     "sw-precache": "^5.1.1"

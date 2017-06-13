@@ -11,8 +11,12 @@
   function aviatorsAPIservice($http) {
 
     const vm = this
-    vm.service = {}
 
+    vm.service = {
+      getPlanes(){
+
+      }
+    }
 
 //======================
 // Plane routes
@@ -39,11 +43,11 @@
 // Lessons routes
 //======================
     vm.service.getLessons = (lessonsOn)=>{
-      return $http.get('https://aviatorsapp.herokuapp.com/lessons/'+lessonsOn)
+      return $http.get(`https://aviatorsapp.herokuapp.com/lessons/${lessonsOn}`)
     }
 
     vm.service.getLessonContent = (lesson_id)=>{
-      return $http.get('https://aviatorsapp.herokuapp.com/lessons/'+lesson_id+'/lessonContents')
+      return $http.get(`https://aviatorsapp.herokuapp.com/lessons/${lesson_id}/lessonContents`)
     }
 //======================
 // routes

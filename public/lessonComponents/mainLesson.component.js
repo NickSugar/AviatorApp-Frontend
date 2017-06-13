@@ -22,8 +22,35 @@
         const vm = this
 
         vm.auth = authService
-        vm.content = $stateParams.content.data
+        vm.content = buildLesson()
 
-        console.log(vm.content);
+
+        function buildLesson() {
+          var rawContent = $stateParams.content.data
+          var content = {}
+
+          for (var i = 0; i < rawContent.length; i++) {
+
+            if (rawContent[i].type === 'sectionHeader') {
+              content.header = rawContent[i].content
+            }
+
+            if (rawContent[i].type === 'dataList') {
+              content.dataList = parseDateList(rawContent[i].content)
+            }
+
+          }
+          return content
+        }
+
+        function parseDateList(content) {
+          var parts = content.split(';')
+          for (var i = 0; i < parts.length; i++) {
+            if (/^\(/) {
+
+            }
+          }
+        }
+
       }
 }())

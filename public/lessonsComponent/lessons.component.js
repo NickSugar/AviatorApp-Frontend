@@ -27,11 +27,9 @@
         vm.start = start
 
         function start(lesson_id) {
-          console.log('start');
           aviatorsAPIservice.getLessonContent(lesson_id)
             .then(content=>{
-              console.log(content);
-              $state.go('lesson', {content: content})
+              $state.go('lesson', {content})
             })
         }
       }
