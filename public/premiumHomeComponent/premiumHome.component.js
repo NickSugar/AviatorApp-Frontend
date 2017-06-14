@@ -48,10 +48,10 @@
   angular.module('aviatorsApp')
     .component('premiumHome', {
       templateUrl: './premiumHomeComponent/premiumHome.html',
-      controller: ['authService', 'aviatorsAPIservice', premiumHomeCtrl]
+      controller: ['authService', 'aviatorsAPIservice' '$state', premiumHomeCtrl]
     });
 
-  function  premiumHomeCtrl(authService, aviatorsAPIservice) {
+  function  premiumHomeCtrl(authService, aviatorsAPIservice, $state) {
 
         const vm = Object.assign(this, {
           auth: authService,
