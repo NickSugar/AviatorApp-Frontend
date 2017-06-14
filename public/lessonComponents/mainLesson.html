@@ -1,14 +1,16 @@
 <header-comp></header-comp>
 
-<h1 class="lessonHeader">{{$ctrl.content.header}}</h1>
+<!-- <h1 class="lessonHeader">{{$ctrl.content.header}}</h1> -->
 
 <section class="lessonSection lessonViewScreen">
   <div class="lessonContentSection">
 
     <img class="lessonImg" src="assets/images/gobosh1.1.png" alt="lesson img">
+    <img class="lessonImg" src="assets/images/gobosh1.2.png" alt="lesson img">
 
     <div class="wrapper" ng-controller="DocCtrl">
       <ng-pdf template-url="pdfComponent/pdf.html" scale="page-fit" page="16"></ng-pdf>
     </div>
+
   </div>
 </section>

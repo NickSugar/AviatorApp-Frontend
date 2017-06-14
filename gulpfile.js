@@ -9,7 +9,7 @@ gulp.task('default', function(callback) {
 
   swPrecache.write(`${rootDir}/service-worker.js`, {
     staticFileGlobs: [
-      rootDir + '/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff}'
+      rootDir + '/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff,pdf}'
     ],
     runtimeCaching: [{
       urlPattern: /min\.js/,
