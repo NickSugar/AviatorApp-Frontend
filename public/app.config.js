@@ -43,14 +43,12 @@
         }
       })
 
-      // Initialization for the angular-auth0 library
       angularAuth0Provider.init({
         clientID: 'maJvJASZ801qZc0InQYbyGyhMOVeyLan',
         domain: 'nicksugar.auth0.com',
         responseType: 'token id_token',
         audience: 'https://nicksugar.auth0.com/userinfo',
-        // redirectUri: 'http://localhost:5000/premium',
-        redirectUri: 'https://aviatorsapp.com',
+        redirectUri: 'https://aviatorsapp.com/premium',
         scope: 'openid'
       });
 
@@ -58,8 +56,6 @@
 
       $locationProvider.hashPrefix('');
 
-      /// Comment out the line below to run the app
-      // without HTML5 mode (will use hashes in routes)
       $locationProvider.html5Mode(true);
   }
 })()
