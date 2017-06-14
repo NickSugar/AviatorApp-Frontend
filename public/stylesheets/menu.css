@@ -96,8 +96,8 @@ hr {
   width: 95vw; }
 
 .pdfBtn {
-  background: none;
-  border: none; }
+  background: transparent !important;
+  border: none !important; }
 
 .wrapper {
   width: 95vw; }
