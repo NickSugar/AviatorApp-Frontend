@@ -98,4 +98,12 @@ hr {
 .wrapper {
   width: 95vw; }
 
+.lessonViewScreen {
+  height: 90vh;
+  overflow: hidden; }
+
+.lessonContentSection {
+  height: 90%;
+  overflow-y: scroll; }
+
 /*# sourceMappingURL=menu.css.map */
