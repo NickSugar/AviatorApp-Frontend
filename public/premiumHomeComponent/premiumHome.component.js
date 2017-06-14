@@ -48,7 +48,7 @@
   angular.module('aviatorsApp')
     .component('premiumHome', {
       templateUrl: './premiumHomeComponent/premiumHome.html',
-      controller: ['authService', 'aviatorsAPIservice' '$state', premiumHomeCtrl]
+      controller: ['authService', 'aviatorsAPIservice', '$state', premiumHomeCtrl]
     });
 
   function  premiumHomeCtrl(authService, aviatorsAPIservice, $state) {
