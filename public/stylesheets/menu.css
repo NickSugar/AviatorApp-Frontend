@@ -99,11 +99,11 @@ hr {
   width: 95vw; }
 
 .lessonViewScreen {
-  height: 90vh;
+  height: 85vh;
   overflow: hidden; }
 
 .lessonContentSection {
-  height: 90%;
+  height: 85%;
   overflow-y: scroll; }
 
 /*# sourceMappingURL=menu.css.map */
