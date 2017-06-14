@@ -31,7 +31,6 @@
     <md-content class="content" ng-repeat="lesson in $ctrl.lessons">
       <h2>{{lesson.name}}</h2>
       <p>{{lesson.description}}</p>
-      <p>{{lesson.id}}</p>
 
       <md-button ng-click="$ctrl.start(lesson.id)" class="md-raised md-primary content">Start Lesson</md-button>
     </md-content>

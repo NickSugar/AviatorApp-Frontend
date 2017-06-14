@@ -5,7 +5,8 @@
     .module('aviatorsApp', [
       'auth0.auth0',
       'ui.router',
-      'ngMaterial'
+      'ngMaterial',
+      'pdf'
       // 'angularMoment'
     ])
 })()

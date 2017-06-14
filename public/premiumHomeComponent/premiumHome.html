@@ -1,4 +1,4 @@
-<header-comp></header-comp>
+<!-- <header-comp></header-comp>
 
 <div class="wrapper">
   <h1 class="menuTitle">Lesson Menu</h1>
@@ -11,7 +11,55 @@
   <section class="three" ng-click="$ctrl.goToPage(2)">
     <h1 class="menuOptions">Manuals</h1>
   </section>
-  <!-- <section class="four" ng-click="$ctrl.goToPage(3)">
+  <section class="four" ng-click="$ctrl.goToPage(3)">
     <h1 class="menuOptions">Settings</h1>
-  </section> -->
+  </section>
+</div> -->
+
+
+<header-comp></header-comp>
+
+<div class="viewScreen">
+
+  <h1 class="menuTitle">Lesson Menu</h1>
+
+
+  <md-content class="content md-padding">
+
+    <md-nav-bar
+      md-selected-nav-item="currentNavItem"
+      nav-bar-aria-label="navigation links">
+      <md-nav-item md-nav-click="$ctrl.open('licenses')" md-nav-focus name="licenses">
+        Licenses
+      </md-nav-item>
+      <md-nav-item md-nav-click="$ctrl.open('aircraft')" name="aircraft">
+        Aircraft
+      </md-nav-item>
+      <md-nav-item md-nav-click="$ctrl.open('manuals')" name="manuals">
+        Manuals
+      </md-nav-item>
+
+    </md-nav-bar>
+
+  </md-content>
+
+  <section class="contentSection">
+
+      <md-content ng-show="$ctrl.showAircraft" layout="column" layout-align="start center" class="content" ng-click="$ctrl.goToPage(1)">
+
+        <md-card ng-repeat="plane in $ctrl.planes" class="cards" layout-xs="column" layout="row" layout-align="center center">
+           <img src="{{plane.img_url}}" class="planeImg sm-card-image" alt="gobosh image">
+           <md-card-content class="cardContent">
+             <h2 class="menuItemName">{{plane.fullName}}</h2>
+             <md-card-actions class="lessonBtn" layout="row" layout-align="end center">
+               <md-button ng-click="$ctrl.lessons(plane.name, plane.fullName)" class="md-primary md-raised">Let's Fly!</md-button>
+             </md-card-actions>
+             <p class="description">{{plane.description}}</p>
+           </md-card-content>
+        </md-card>
+
+      </md-content>
+
+  </section>
+
 </div>

@@ -33,7 +33,7 @@ hr {
   background-color: transparent; }
 
 .cards {
-  background-color: #c5c6d3;
+  background-color: rgba(197, 198, 211, 0.8);
   border-radius: 15px;
   padding: 10px; }
 
@@ -84,5 +84,18 @@ hr {
 .lessonImg {
   object-fit: contain;
   width: 95%; }
+
+.pdfPageInput {
+  width: 2em;
+  margin: 0;
+  height: 0;
+  padding: 0;
+  top: -1.1em; }
+
+.pdfControls {
+  width: 95vw; }
+
+.wrapper {
+  width: 95vw; }
 
 /*# sourceMappingURL=menu.css.map */
