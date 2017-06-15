@@ -1,6 +1,24 @@
 <header-comp></header-comp>
 
-<!-- <h1 class="lessonHeader">{{$ctrl.content.header}}</h1> -->
+<md-content class="content md-padding">
+
+  <md-nav-bar
+     layout="row" layout-align="center center"
+    md-selected-nav-item="currentNavItem"
+    nav-bar-aria-label="navigation links">
+    <md-nav-item class="lessonNavBtn" md-nav-click="" name="licenses">
+      Previous
+    </md-nav-item>
+    <md-nav-item class="lessonNavBtn" md-nav-click="" name="aircraft">
+      Next
+    </md-nav-item>
+    <md-nav-item class="lessonNavBtn" md-nav-click="$ctrl.flashCards()">
+      Flash Cards
+    </md-nav-item>
+
+  </md-nav-bar>
+
+</md-content>
 
 <section class="lessonSection lessonViewScreen">
   <div class="lessonContentSection">

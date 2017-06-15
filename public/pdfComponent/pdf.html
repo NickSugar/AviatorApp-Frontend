@@ -2,11 +2,11 @@
 <section class="pdfControls" layout="row" layout-align="center center">
 
   <nav layout="row" layout-align="space-around center" ng-class="getNavStyle(scroll)">
-    <button ng-click="goPrevious()"><i class="material-icons">arrow_back</i></button>
-    <button ng-click="goNext()"><i class="material-icons">arrow_forward</i></button>
+    <button class="pdfBtn" ng-click="goPrevious()"><i class="material-icons">arrow_back</i></button>
+    <button class="pdfBtn" ng-click="goNext()"><i class="material-icons">arrow_forward</i></button>
 
-    <button ng-click="zoomIn()"><i class="material-icons">zoom_in</i></button>
-    <button ng-click="zoomOut()"><i class="material-icons">zoom_out</i></button>
+    <button class="pdfBtn" ng-click="zoomIn()"><i class="material-icons">zoom_in</i></button>
+    <button class="pdfBtn" ng-click="zoomOut()"><i class="material-icons">zoom_out</i></button>
 
     <span>Page: </span>
     <md-input-container class="pdfPageInput">

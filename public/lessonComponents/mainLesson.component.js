@@ -23,6 +23,11 @@
 
         vm.auth = authService
         vm.content = buildLesson()
+        vm.flashCards = flashCards
+
+        function flashCards() {
+          $state.go('flashCard')
+        }
 
 
         function buildLesson() {

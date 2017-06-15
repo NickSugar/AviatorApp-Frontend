@@ -9,6 +9,7 @@
   <md-content class="content md-padding">
 
     <md-nav-bar
+      layout="row" layout-align="center center"
       md-selected-nav-item="currentNavItem"
       nav-bar-aria-label="navigation links">
       <md-nav-item md-nav-click="" name="licenses">
@@ -28,11 +29,25 @@
   <h1 class="content">{{$ctrl.lessonOn}}</h1>
   <section class="contentSection">
 
-    <md-content class="content" ng-repeat="lesson in $ctrl.lessons">
+    <!-- <md-content class="content" ng-repeat="lesson in $ctrl.lessons">
       <h2>{{lesson.name}}</h2>
       <p>{{lesson.description}}</p>
 
       <md-button ng-click="$ctrl.start(lesson.id)" class="md-raised md-primary content">Start Lesson</md-button>
+    </md-content> -->
+
+    <md-content layout="column" layout-align="start center" class="content" ng-click="$ctrl.goToPage(1)">
+
+      <md-card ng-repeat="lesson in $ctrl.lessons" class="cards content" layout-xs="column" layout="row" layout-align="center center">
+         <md-card-content class="cardContent">
+           <h2 class="menuItemName">{{lesson.name}}</h2>
+           <md-card-actions class="lessonBtn" layout="row" layout-align="end center">
+             <md-button ng-click="$ctrl.start(lesson.id)" class="md-primary md-raised">Start Lesson</md-button>
+           </md-card-actions>
+           <p class="description">{{lesson.description}}</p>
+         </md-card-content>
+      </md-card>
+
     </md-content>
   </section>
 </section>

@@ -95,12 +95,11 @@ hr {
 .pdfControls {
   width: 95vw; }
 
-.pdfBtn {
-  background: transparent !important;
-  border: none !important; }
-
 .wrapper {
   width: 95vw; }
+
+.lessonNavBtn {
+  padding: 0; }
 
 .lessonViewScreen {
   height: 85vh;
@@ -109,5 +108,14 @@ hr {
 .lessonContentSection {
   height: 85%;
   overflow-y: scroll; }
+
+.flashCard {
+  height: 65vh; }
+
+.flashCardContent {
+  height: 100%; }
+
+.cardHeaders {
+  text-align: center; }
 
 /*# sourceMappingURL=menu.css.map */

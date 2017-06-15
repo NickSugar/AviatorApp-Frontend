@@ -7,18 +7,20 @@
   <div class="appNameDiv" flex="60">
     <h1 class="appName">Aviators App</h1>
   </div>
-  
-  <md-button flex="10" class="signBtn md-primary md-raised"
-    ng-if="!$ctrl.auth.isAuthenticated()"
-    ng-click="$ctrl.auth.login()">
-    <p class="btnText">Sign in</p>
-  </md-button>
 
-  <md-button flex="10" class="signBtn md-warn md-raised"
-    ng-if="$ctrl.auth.isAuthenticated()"
-    ng-click="$ctrl.auth.logout()">
-    <p class="btnText">Sign out</p>
-  </md-button>
+  <div flex="10" class="">
+    <md-button  class="signBtn md-primary md-raised"
+      ng-if="!$ctrl.auth.isAuthenticated()"
+      ng-click="$ctrl.auth.login()">
+      <p class="btnText">Sign in</p>
+    </md-button>
+
+    <md-button flex="10" class="signBtn md-warn md-raised"
+      ng-if="$ctrl.auth.isAuthenticated()"
+      ng-click="$ctrl.auth.logout()">
+      <p class="btnText">Sign out</p>
+    </md-button>
+  </div>
 
   <div flex="10">
 

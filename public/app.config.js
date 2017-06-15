@@ -42,6 +42,10 @@
           content: null
         }
       })
+      .state('flashCard', {
+        url: '/flash',
+        template: '<flash-card></flash-card>'
+      })
 
       angularAuth0Provider.init({
         clientID: 'maJvJASZ801qZc0InQYbyGyhMOVeyLan',

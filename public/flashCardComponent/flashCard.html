@@ -1,0 +1,48 @@
+
+<header-comp></header-comp>
+
+<md-content class="content md-padding">
+
+  <md-nav-bar
+    layout="row" layout-align="center center"
+    md-selected-nav-item="currentNavItem"
+    nav-bar-aria-label="navigation links">
+    <md-nav-item md-nav-click="$ctrl.goToLesson($ctrl.flashCard.lesson_id)">
+      Back to Lesson
+    </md-nav-item>
+    <md-nav-item md-nav-click="">
+      Next Card
+    </md-nav-item>
+
+  </md-nav-bar>
+
+</md-content>
+
+<md-card class="flashCard" ng-if="$ctrl.questionCard">
+ <md-card-content class="flashCardContent" layout="column" layout-align="space-around center">
+
+   <h2 class="cardHeaders">{{$ctrl.flashCard.question}}</h2>
+
+   <div>
+     <md-input-container>
+       <label>My Answer</label>
+       <input ng-model="userAnswer" required>
+     </md-input-container>
+     <md-button ng-click="$ctrl.flipCard()" class="md-primary">How'd I do?</md-button>
+   </div>
+
+ </md-card-content>
+</md-card>
+
+<md-card class="flashCard" ng-if="$ctrl.answerCard">
+ <md-card-content class="flashCardContent" layout="column" layout-align="space-around center">
+
+   <h2 class="cardHeaders">{{$ctrl.flashCard.answer}}</h2>
+
+   <div>
+     <md-button ng-click="$ctrl.answer('right', $ctrl.flashCard.id)" class="md-primary md-raised">Got it!</md-button>
+     <md-button ng-click="$ctrl.answer('wrong', $ctrl.flashCard.id)" class="md-warn md-raised">I'll get it next time!</md-button>
+   </div>
+
+ </md-card-content>
+</md-card>
